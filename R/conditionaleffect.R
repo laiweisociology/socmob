@@ -13,7 +13,7 @@
 #' @param o The origin variable (string), must be a factor
 #' @param x A vector of strings for additional control variables (confounders)
 #' @param estimator A learner name or vector of learner names from \code{sl3}. If multiple,
-#'   a Super Learner is built. Default is "Lrnr_glm".
+#'   a Super Learner is built. Default is "Lrnr_glm". Run sl3_list_learners() for a complete list.
 #' @param boot_reps The number of bootstrap repetitions for estimating standard errors. Default is 500.
 #'
 #' @returns A list containing:
