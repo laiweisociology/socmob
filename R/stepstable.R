@@ -59,7 +59,6 @@ stepstable <- function(data, o, d, strength) {
   zero_cells <- which(O == 0, arr.ind = TRUE)
   if (nrow(zero_cells) > 0) {
     O[zero_cells] <- O[zero_cells] + 0.01
-    message("Added 0.01 to zero cells in the observed OD table to avoid issues with zero counts.")
   }
 
   # Compute marginal totals

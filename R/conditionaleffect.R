@@ -75,20 +75,6 @@ conditionaleffect <- function(
     stop("The treatment variable 'd' must have at least two levels.")
   }
 
-  # 4. Validate that all elements of estimator are recognized learners
-  #    (Handle older sl3 versions by converting sl3_list_learners() to character vector)
-  sl3_learners <- sl3::sl3_list_learners()
-  if (is.data.frame(sl3_learners)) {
-    sl3_learners <- sl3_learners$name
-  } else if (!is.character(sl3_learners)) {
-    stop("`sl3_list_learners()` returned an unexpected format.")
-  }
-  unrecognized <- estimator[!(estimator %in% sl3_learners)]
-  if (length(unrecognized) > 0) {
-    stop("The following learners are not recognized by sl3_list_learners(): ",
-         paste(unrecognized, collapse = ", "),
-         ". Use sl3::sl3_list_learners() to see available learners.")
-  }
 
   # 5. Build the sl3 learner (single or multiple)
   if (length(estimator) == 1) {

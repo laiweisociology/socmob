@@ -23,7 +23,7 @@
 #' @param d The destination/treatment variable (string)
 #' @param o The origin variable (string)
 #' @param x A character vector of additional control variables (confounders)
-#' @param estimator A learner name or vector of learner names from sl3 (default "Lrnr_glm")
+#' @param estimator A learner name or vector of learner names from sl3 (default "Lrnr_glm"). Run sl3_list_learners() for a complete list.
 #' @param custom.pips Optionally, a dataframe of post-intervention propensities (columns = treatment levels)
 #' @param custom.table A matrix/table for the post-intervention scenario (rows = origin, columns = destination)
 #' @param strength A numeric \eqn{\in [0,1]} specifying the log-odds ratio change in \code{\link{stepstable}}
